@@ -29,7 +29,7 @@ done
 IP=$(ifconfig $2 | grep 'inet ' | cut -d' ' -f2)
 
 # Launch responder
-python $1 $3 -i $IP
+python /Users/atreus/.pyenv/versions/3.10.15/envs/responder/lib/python3.10/site-packages/Responder/Responder.py $3 -i $IP
 
 # restore stopped services
 for agent in ${SVC_LIST[@]}; do
